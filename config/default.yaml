@@ -1,0 +1,43 @@
+# Топик одометрии выбирается явно, чтобы избежать подмешивания GT или SLAM производителя.
+lidar: auto
+imu: auto
+odom: null
+base: base_link
+# [x, y, z в метрах, roll, pitch, yaw в градусах], T_base_sensor; null читает /tf_static.
+base_T_lidar: null
+base_T_imu: null
+clock: header
+imu_offset_s: 0
+odom_offset_s: 0
+max_gap_s: 0.30
+static_seconds: 1.0
+min_range: 0.45
+max_range: 30.0
+# Время относительно stamp скана; задайте поле, масштаб в секундах и сдвиг.
+# Например: t (наносекунды от начала), stamp в конце оборота 0.1 с -> 1e-9 и -0.1.
+point_time_field: null
+point_time_scale: 1.0
+point_time_shift_s: 0.0
+max_scan_span_s: 0.25
+body_box: null
+voxel: 0.14
+max_points: 2800
+min_points: 40
+max_corr: 0.65
+min_overlap: 0.50
+max_residual: 0.18
+max_correction_m: 0.8
+max_correction_deg: 25
+weak_information: 0.012
+keyframe_m: 0.38
+keyframe_deg: 10
+local_keyframes: 12
+loop: true
+loop_radius: 1.7
+loop_min_path: 7.0
+resolution: 0.07
+# Сколько разных ключевых кадров должны подтвердить свободную ячейку карты.
+map_min_free_observations: 1
+# Высота препятствий в ГОРИЗОНТАЛЬНОМ map относительно центра базы при старте.
+height_min: -0.18
+height_max: 1.3
