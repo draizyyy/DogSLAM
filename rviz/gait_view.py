@@ -55,7 +55,7 @@ class DogView(Node):
             m.color.a = 1.
             markers.append(m)
             return m
-        white, orange, slate = (0.90,0.95,1.), (1.,0.45,0.09), (0.32,0.44,0.55)
+        white, orange, slate = (1.,0.16,0.03), (1.,0.83,0.10), (1.,0.52,0.09)
         part(Marker.CUBE, [0,0,0], (.48,.19,.14), white)
         part(Marker.SPHERE, [.23,0,.035], (.17,.18,.15), orange)
         for leg, (hip, thigh, calf) in enumerate(self.angles[i].reshape(4,3)):
@@ -79,4 +79,5 @@ class DogView(Node):
 if __name__ == "__main__":
     rclpy.init()
     rclpy.spin(DogView(np.load(sys.argv[1])))
+
 

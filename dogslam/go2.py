@@ -63,7 +63,7 @@ class Tracker:
 
 def main():
     from dogslam.bags import open_bag, clouds, stamp, xyz, quat
-    out=Path('runs/jury-final');out.mkdir(exist_ok=True)
+    out=Path('runs/jury-final');out.mkdir(parents=True,exist_ok=True)
     points=map_points('data/jury/bag_for_mapping')
     np.save(out/'map.npy',points)
     tracker=Tracker(points); ts=[]; poses=[]; rows=[]; last=None
