@@ -1,0 +1,44 @@
+Visualization Manager:
+  Global Options:
+    Fixed Frame: map
+    Background Color: 12; 24; 37
+  Displays:
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Go2 map
+      Enabled: true
+      Topic:
+        Value: /dogslam/map3d
+      Color Transformer: FlatColor
+      Color: 99; 142; 169
+      Style: Points
+      Size (Pixels): 2
+    - Class: rviz_default_plugins/Path
+      Name: Inspection
+      Enabled: true
+      Topic:
+        Value: /dogslam/path
+      Color: 255; 218; 96
+      Line Style: Billboards
+      Line Width: 0.095
+    - Class: rviz_default_plugins/Pose
+      Name: Robot
+      Enabled: true
+      Topic:
+        Value: /dogslam/base_pose
+      Color: 255; 100; 65
+      Arrow Length: 1.1
+      Head Radius: 0.30
+      Shaft Radius: 0.12
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Scale: 68
+      Angle: 1.5707963
+      X: 0.3
+      Y: 9.25
+Window Geometry:
+  Width: 1360
+  Height: 810
+
+
+
