@@ -8,23 +8,27 @@ Visualization Manager:
       Enabled: true
       Topic:
         Value: /dogslam/map3d
-      Color Transformer: AxisColor
-      Axis: Z
+      Color Transformer: FlatColor
+      Color: 157; 180; 202
       Style: Points
-      Size (Pixels): 3
+      Size (Pixels): 2
     - Class: rviz_default_plugins/Path
       Name: Inspection
       Enabled: true
       Topic:
         Value: /dogslam/path
-      Color: 255; 90; 45
+      Color: 255; 196; 50
       Line Style: Billboards
-      Line Width: 0.12
+      Line Width: 0.20
     - Class: rviz_default_plugins/Pose
       Name: Robot
       Enabled: true
       Topic:
         Value: /dogslam/base_pose
+      Color: 255; 100; 65
+      Arrow Length: 1.1
+      Head Radius: 0.30
+      Shaft Radius: 0.12
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
@@ -40,4 +44,5 @@ Visualization Manager:
 Window Geometry:
   Width: 1000
   Height: 650
+
 
